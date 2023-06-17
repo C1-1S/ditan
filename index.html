@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="zh" id="html">
+
+<head>
+    <meta charset="utf-8" />
+    <title>低碳生活</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/donghua.css" />
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-slide-active .lunbo1 {
+            background: url(img/beijing.png) no-repeat center;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        }
+
+        .lunbo1 .huadong {
+            width: 100%;
+            height: 20px;
+            background: url(img/huangdong_logo.png) no-repeat center;
+            position: absolute;
+            bottom: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .lunbo1 .logo {
+            width: 100%;
+            height: 350px;
+            background: url(img/logo.png) no-repeat center;
+            background-size: 95%;
+            position: absolute;
+            top: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+            -webkit-animation: shake-vertical 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-vertical 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+
+        .lunbo1 .right_text {
+            width: 244px;
+            height: 155px;
+            background: url(img/right_text.png) no-repeat center;
+            background-size: 60%;
+            position: absolute;
+            right: -53px;
+            bottom: 0px;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .l2 {
+
+            animation: blink-2 1s infinite both;
+        }
+
+        .l3 {
+            width: 50%;
+            height: 100px;
+            position: absolute;
+            left: 5%;
+            bottom: 10%;
+            text-indent: -9999px;
+            -webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
+            animation: pulsate-fwd 1s ease-in-out infinite both;
+        }
+
+
+
+        .swiper-slide-active .b2 {
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            right: -27%;
+            top: 34%;
+            -webkit-animation: slide-in-bl 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bl 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        .lunbo1 .bike {
+            width: 100%;
+            height: 200px;
+            background: url(img/people.png) no-repeat center;
+            background-size: 50%;
+
+            text-indent: -9999px;
+            -webkit-animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+
+
+        .lunbo1 .light {
+            width: 50%;
+            height: 100px;
+            background: url(img/guangguang.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            left: 5%;
+            bottom: 12%;
+            text-indent: -9999px;
+            -webkit-animation: blink-2 1s infinite both;
+            animation: rotate 4s linear infinite;
+
+        }
+
+        .lunbo1 .flower {
+            width: 100%;
+            height: 100px;
+            background: url(img/huahua.png) no-repeat center;
+            background-size: 50%;
+            position: absolute;
+            bottom: 12%;
+            left: 30%;
+            text-indent: -9999px;
+            animation: rotate 3s linear infinite;
+        }
+
+        .lunbo1 .flower_set {
+            width: 50%;
+            height: 100px;
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+        }
+
+
+        .shake-vertical {
+            -webkit-animation: shake-vertical 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: shake-vertical 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation-iteration-count: infinite;
+        }
+
+
+
+        .swiper-slide-active .bounce-in-top1 {
+            -webkit-animation: bounce-in-top 1.5s 1.5s both;
+            animation: bounce-in-top 1.5s 1.5s both;
+        }
+
+
+        .swiper-slide-active .bounce-in-right {
+            -webkit-animation: bounce-in-right 2s 2s both;
+            animation: bounce-in-right 2s 2s both;
+        }
+
+        .swiper-slide-active .shake-verticals {
+            width: 100%;
+            height: 350px;
+            -webkit-animation: shake-vertical 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-vertical 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+
+        .swiper-slide-active .shake-bottom {
+            width: 100%;
+            height: 155px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            -webkit-animation: shake-bottom 4.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-bottom 4.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+
+        .swiper-slide-active .bounce-in-left2 {
+            -webkit-animation: bounce-in-left 2s 0.5s both;
+            animation: bounce-in-left 2s 0.5s both;
+        }
+
+        .swiper-slide-active .bounce-in-right1 {
+            -webkit-animation: bounce-in-right 1s 0.5s both;
+            animation: bounce-in-right 1s 0.5s both;
+        }
+
+
+        .swiper-slide-active .lunbo2 {
+            background: url(img/p2beijing.png) no-repeat center;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        }
+
+        /* 第二页 */
+
+        .box1 {
+            width: auto;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box2 {
+            width: auto;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box3 {
+            width: auto;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box4 {
+            width: auto;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .lunbo2 .huadong {
+            width: 100%;
+            height: 20px;
+            background: url(img/huangdong_logo.png) no-repeat center;
+            position: absolute;
+            bottom: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .lunbo2 .yezi {
+            width: 100px;
+            height: 110px;
+            background: url(img/p2yezi.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            right: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .lunbo2 .paper {
+            width: 100%;
+            height: 100%;
+            background: url(img/beijing2.png) no-repeat center;
+            background-size: cover;
+            position: absolute;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .paper .logo_text {
+            width: 90%;
+            height: 140px;
+            background: url(img/p2logo_text.png) no-repeat center;
+            background-size: 100%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .paper .left_img {
+            width: 120px;
+            height: 100px;
+            background: url(img/dianqi.png) no-repeat center;
+            background-size: 100%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .paper .logo {
+            width: 120px;
+            height: 100px;
+            background: url(img/p2dianqi.png) no-repeat center;
+            background-size: 100%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .paper .right_text {
+            width: 80px;
+            height: 100px;
+            background: url(img/dianqi_text.png) no-repeat center;
+            background-size: 100%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .paper .ditan_text {
+            width: 88px;
+            height: 100px;
+            background: url(img/ditan_text.png) no-repeat center;
+            background-size: 100%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima5 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 36%;
+            left: 12%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .paper .ditan_img {
+            width: 120px;
+            height: 120px;
+            background: url(img/p2ditan.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima6 {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: 32%;
+            left: 37%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .paper .right_img {
+            width: 100px;
+            height: 100px;
+            background: url(img/ditan.png) no-repeat center;
+            background-size: 100%;
+            text-indent: -9999px;
+            position: absolute;
+            top: 20%;
+            right: 2%;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .paper .left_img1 {
+            width: 120px;
+            height: 120px;
+            background: url(img/food.png) no-repeat center;
+            background-size: 100%;
+            text-indent: -9999px;
+            position: absolute;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima8 {
+            width: 120px;
+            height: 120px;
+            text-indent: -9999px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .paper .logos {
+            width: 130px;
+            height: 130px;
+            background: url(img/p2food.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima9 {
+            width: 130px;
+            height: 130px;
+            position: absolute;
+            top: 47%;
+            left: 27%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .paper .right_text1 {
+            width: 80px;
+            height: 100px;
+            background: url(img/food_text.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            right: 8%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima10 {
+            width: 80px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            right: 8%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima1 {
+            width: 100%;
+            height: 230px;
+            position: absolute;
+            top: 2%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .paper .sun_text {
+            width: 80px;
+            height: 100px;
+            background: url(img/sun_text.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            top: 16%;
+            left: 12%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima11 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 62%;
+            left: 10%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .paper .sun_img {
+            width: 120px;
+            height: 120px;
+            background: url(img/p2sun_img.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            top: 15%;
+            left: 35%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima12 {
+            width: 200px;
+            height: 170px;
+            position: absolute;
+            top: 58%;
+            left: 17%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .paper .right_imgs {
+            width: 100px;
+            height: 100px;
+            background: url(img/sun.png) no-repeat center;
+            background-size: 100%;
+            text-indent: -9999px;
+            position: absolute;
+            top: 20%;
+            right: 2%;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima13 {
+            width: 100px;
+            height: 130px;
+            text-indent: -9999px;
+            position: absolute;
+            top: 61%;
+            right: -3%;
+            overflow: hidden;
+        }
+
+        .ima7 {
+            width: 100px;
+            height: 130px;
+            text-indent: -9999px;
+            position: absolute;
+            top: 31%;
+            right: 1%;
+            overflow: hidden;
+        }
+
+        .ima2 {
+            width: 120px;
+            height: 110px;
+            position: absolute;
+            left: 0%;
+            top: 18%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima3 {
+            width: 120px;
+            height: 100px;
+            position: absolute;
+            top: 20%;
+            left: 27%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima4 {
+            width: 80px;
+            height: 130px;
+            position: absolute;
+            top: 20%;
+            right: 8%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        /* 第二页动画特效 */
+        .swiper-slide-active .roll-in-top {
+            -webkit-animation: roll-in-top 2s ease-out both;
+            animation: roll-in-top 2s ease-out both;
+        }
+
+        .swiper-slide-active .vibrate-1a {
+            -webkit-animation: vibrate-1 2.5s linear infinite both;
+            animation: vibrate-1 2.5s linear infinite both;
+        }
+
+        .swiper-slide-active .roll-in-left {
+            -webkit-animation: roll-in-left 3s ease-out both;
+            animation: roll-in-left 3s ease-out both;
+        }
+
+        .swiper-slide-active .roll-in-right {
+            -webkit-animation: roll-in-right 3s ease-out both;
+            animation: roll-in-right 3s ease-out both;
+        }
+
+        .swiper-slide-active .pulsate-bck {
+            -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
+            animation: pulsate-bck 2s ease-in-out infinite both;
+        }
+
+        .swiper-slide-active .flicker-5 {
+            -webkit-animation: flicker-5 10s linear infinite both;
+            animation: flicker-5 10s linear infinite both;
+        }
+
+        .swiper-slide-active .bounce-in-topa {
+            -webkit-animation: bounce-in-top 1s both 1s;
+            animation: bounce-in-top 1s both 1s;
+        }
+
+        .swiper-slide-active .bounce-in-topb {
+            -webkit-animation: bounce-in-top 1s both 0.5s;
+            animation: bounce-in-top 1s both 0.5s;
+        }
+
+        .swiper-slide-active .bounce-in-right {
+            -webkit-animation: bounce-in-right 1s both 1.5s;
+            animation: bounce-in-right 1s both 1.5s;
+        }
+
+        .swiper-slide-active .bounce-in-left1 {
+            -webkit-animation: bounce-in-left 1s both 1.8s;
+            animation: bounce-in-left 1s both 1.8s;
+        }
+
+        .swiper-slide-active .bounce-in-bottom {
+            -webkit-animation: bounce-in-bottom 1s both 2s;
+            animation: bounce-in-bottom 1s both 2s;
+        }
+
+        .swiper-slide-active .bounce-in-bottom1 {
+            -webkit-animation: bounce-in-bottom 1s both 2.3s;
+            animation: bounce-in-bottom 1s both 2.3s;
+        }
+
+        .swiper-slide-active .shake-bl {
+            -webkit-animation: shake-bl 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-bl 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+
+        .swiper-slide-active .vibrate-1 {
+            -webkit-animation: vibrate-1 3s linear infinite both;
+            animation: vibrate-1 3s linear infinite both;
+        }
+
+        .swiper-slide-active .roll-in-blurred-right {
+            -webkit-animation: roll-in-blurred-right 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            animation: roll-in-blurred-right 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        }
+
+        .swiper-slide-active .roll-in-left {
+            -webkit-animation: roll-in-left 1s ease-out 1.5s both;
+            animation: roll-in-left 1s ease-out 1.5s both;
+        }
+
+        .swiper-slide-active .roll-in-bottom {
+            -webkit-animation: roll-in-bottom 1s ease-out both;
+            animation: roll-in-bottom 1s ease-out both;
+        }
+
+        .leaf-icon {
+            animation: yezi 4s infinite ease-in-out;
+        }
+
+
+        /* 第三页 */
+        .swiper-slide-active .lunbo3 {
+            background: url(img/p3beijing.png) no-repeat center;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        }
+
+
+        .lunbo3 .huadong {
+            width: 100%;
+            height: 20px;
+            background: url(img/huangdong_logo.png) no-repeat center;
+            position: absolute;
+            bottom: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .swiper-slide-active .whbj {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 5%;
+            background: url(img/p3paper.png) center no-repeat;
+            background-size: 100%;
+            text-indent: -9999px;
+            overflow: hidden;
+            animation-name: unfold;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        .ima14 {
+            width: 90%;
+            height: 50%;
+            position: absolute;
+            top: -3%;
+            left: 5%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima15 {
+            width: 35%;
+            height: 20%;
+            position: absolute;
+            top: 12%;
+            left: 35%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+
+        }
+
+        .ima16 {
+            width: 40%;
+            height: 19%;
+            background: url(img/greenkuang.png) center no-repeat;
+            background-position: center;
+            background-size: 100%;
+            position: absolute;
+            top: 20%;
+            left: 32%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+
+        }
+
+        .ima17 {
+            width: 35%;
+            height: 19%;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+
+        }
+
+        .ima18 {
+            width: 100%;
+            height: 42%;
+            background: url(img/greenkuang.png) center no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 30%;
+            left: 0%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .ima19 {
+            width: 100%;
+            height: 42%;
+            position: absolute;
+            left: 0%;
+            bottom: 8%;
+            text-indent: -9999px;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        /* 第三页特效 */
+        .swiper-slide-active .bounce-in-top3 {
+            -webkit-animation: bounce-in-top 1s both 0.5s;
+            animation: bounce-in-top 1s both 0.5s;
+        }
+
+
+        .swiper-slide-active .swirl-in-fwd {
+            -webkit-animation: swirl-in-fwd 1s ease-out both 1s;
+            animation: swirl-in-fwd 1s ease-out both 1s;
+        }
+
+        .swiper-slide-active .roll-in-left3 {
+            -webkit-animation: roll-in-left 1s ease-out both 1.5s;
+            animation: roll-in-left 1s ease-out both 1.5s;
+        }
+
+        .swiper-slide-active .puff-in-center {
+            -webkit-animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both 2s;
+            animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both 2s;
+        }
+
+        .swiper-slide-active .bounce-in-bottom3 {
+            -webkit-animation: bounce-in-bottom 1s both 2.5s;
+            animation: bounce-in-bottom 1s both 2.5s;
+        }
+
+        .swiper-slide-active .pulsate-bck3 {
+            -webkit-animation: pulsate-bck 3s ease-in-out infinite both;
+            animation: pulsate-bck 3s ease-in-out infinite both;
+        }
+
+        .text {
+            animation: shake 2.5s infinite;
+        }
+
+
+        .life {
+            animation: blink 2s infinite;
+        }
+
+
+        .y {
+            animation: slide 5s infinite linear 2s;
+        }
+
+        .shake-lr {
+            -webkit-animation: shake-lr 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-lr 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+
+        .pulsate-fwd {
+            -webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
+            animation: pulsate-fwd 2s ease-in-out infinite both;
+        }
+
+
+        /* 第四页 */
+        .lunbo4 .huadong {
+            width: 100%;
+            height: 20px;
+            background: url(img/huangdong_logo.png) no-repeat center;
+            position: absolute;
+            bottom: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .swiper-slide-active .one {
+            background: url(img/p4diyiye.png) no-repeat center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            position: relative;
+            z-index: 999;
+        }
+
+        .two {
+            background: url(img/p4twobj.png) no-repeat center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-animation: swing-in-top-bck 3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation: swing-in-top-bck 3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            position: relative;
+            z-index: 999;
+        }
+
+        .swiper-slide-active .lunbo4 {
+            background: url(img/p4diyiye.png) no-repeat center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            position: relative;
+            z-index: 999;
+        }
+
+        .ima20 {
+            width: 45%;
+            height: 30%;
+            position: absolute;
+            top: -5%;
+            left: 25%;
+            animation: blink 1.5s infinite;
+        }
+
+        .ima21 {
+            width: 75%;
+            height: 30%;
+            position: absolute;
+            top: 12.5%;
+            left: 15%;
+            -webkit-animation: pulsate-bck4 1.5s ease-in-out infinite both;
+            animation: pulsate-bck4 1.5s ease-in-out infinite both;
+            cursor: pointer;
+        }
+
+        .ima22 {
+            width: 45%;
+            height: 30%;
+            position: absolute;
+            top: -5%;
+            left: 25%;
+            animation: blink 1.5s infinite;
+        }
+
+        .ima23 {
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            top: 12.5%;
+            left: 1%;
+            -webkit-animation: pulsate-bck4 1.5s ease-in-out infinite both;
+            animation: pulsate-bck4 1.5s ease-in-out infinite both;
+        }
+
+        .ima24 {
+            width: 45%;
+            height: 30%;
+            position: absolute;
+            top: -1.5%;
+            left: 53%;
+            animation: shakeAnimation 1s infinite;
+        }
+
+        .ima25 {
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            bottom: -5%;
+            left: 0;
+            -webkit-animation: shake-bottom 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-bottom 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+
+        .ima26 {
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            bottom: -5%;
+            left: -5%;
+            -webkit-animation: shake-bottom 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-bottom 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        }
+
+        .swiper-slide-active .bounce-in-top4 {
+            -webkit-animation: bounce-in-top 1s both 0.5s;
+            animation: bounce-in-top 1s both 0.5s;
+        }
+
+        .swiper-slide-active .slide-in-blurred-left {
+            -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both 1s;
+            animation: slide-in-blurred-left 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both 1s;
+        }
+
+        .swiper-slide-active .pulsate-fwd4 {
+            -webkit-animation: pulsate-fwd 3s ease-in-out infinite both;
+            animation: pulsate-fwd 3s ease-in-out infinite both;
+        }
+
+        .swiper-slide-active .bounce-in-bottom4 {
+            -webkit-animation: bounce-in-bottom 1s both 1.5s;
+            animation: bounce-in-bottom 1s both 1.5s;
+        }
+
+        @keyframes shakeAnimation {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .mySwiper2 {
+            width: 200px;
+            height: 240px;
+            position: absolute;
+            top: 38%;
+            left: 18%;
+        }
+
+        .mySwiper2 .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .mySwiper2 .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-v {
+            background: #eee;
+        }
+
+        .mySwiper2 .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .swiper-slide-active .puff-in-center {
+            -webkit-animation: puff-in-center 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both 2s;
+            animation: puff-in-center 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both 2s;
+        }
+
+        /* 第五页 */
+
+        .swiper-slide-active .lunbo5 {
+            position: relative;
+            background: url(img/Backgroundimage.png) no-repeat center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            position: relative;
+            z-index: 999;
+        }
+
+        .lunbo5 .huadong {
+            width: 100%;
+            height: 20px;
+            background: url(img/huangdong_logo.png) no-repeat center;
+            position: absolute;
+            bottom: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima27 {
+            width: 95%;
+            height: 30%;
+            position: absolute;
+            top: -4%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima28 {
+            width: 24%;
+            height: 15%;
+            position: absolute;
+            top: 14%;
+            left: 58%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima28 img {
+            width: 75%;
+            height: 75%;
+        }
+
+        .ima35 {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0%;
+            overflow: hidden;
+        }
+
+        .main_text {
+            width: 50%;
+            height: 30%;
+            font-size: 12px;
+            font-weight: bold;
+            position: absolute;
+            top: 22%;
+            left: 9%;
+        }
+
+        .main_text ul li {
+            text-align: left;
+            padding: 8px 0;
+        }
+
+        .num_style {
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            display: inline-block;
+            background: #8cbe5e;
+            line-height: 13px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #8cbe5e;
+            white-space: nowrap;
+            /*给外边框内距限制数字的位置*/
+            padding: 1px 3px 1px 1px;
+            font-size: 14px;
+            transform: scale(0.80);
+            margin-top: 5%;
+            float: left;
+        }
+
+        .laji {
+            width: 40%;
+            height: 25%;
+            position: absolute;
+            top: 2%;
+            right: -45%;
+        }
+
+        .fenlei {
+            width: 40%;
+            height: 25%;
+            position: absolute;
+            top: 20%;
+            right: -45%;
+        }
+
+        .wanter {
+            width: 40%;
+            height: 25%;
+            position: absolute;
+            top: 38%;
+            right: -45%;
+        }
+
+        .langfei {
+            width: 40%;
+            height: 25%;
+            position: absolute;
+            top: 57%;
+            right: -45%;
+        }
+
+        .huanbaodai {
+            width: 40%;
+            height: 25%;
+            position: absolute;
+            top: 74%;
+            right: -45%;
+        }
+
+        .green_text {
+            width: 40%;
+            height: 25%;
+            position: absolute;
+            top: 92%;
+            right: -45%;
+        }
+
+        .logo5 {
+            animation: blink5 1s ease-in-out infinite;
+        }
+
+
+        @keyframes blink5 {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* 第五页动画效果 */
+        .swiper-slide-active .swirl-in-bck {
+            -webkit-animation: swirl-in-bck 1s ease-out both;
+            animation: swirl-in-bck 1s ease-out both;
+        }
+
+        .swiper-slide-active .slide-in-tr {
+            -webkit-animation: slide-in-tr 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 0.5s;
+            animation: slide-in-tr 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 0.5s;
+        }
+
+        .swiper-slide-active .bounce-in-left5 {
+            -webkit-animation: bounce-in-left5 1s both 1s;
+            animation: bounce-in-left5 1s both 1s;
+        }
+
+        .swiper-slide-active .bounce-in-bottom5 {
+            -webkit-animation: bounce-in-bottom5 1s both 1.8s;
+            animation: bounce-in-bottom5 1s both 1.8s;
+        }
+
+        .swiper-slide-active .roll-in-blurred-left5 {
+            -webkit-animation: roll-in-blurred-left5 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both 1.5s;
+            animation: roll-in-blurred-left5 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both 1.5s;
+        }
+
+        .pulsate-bck5 {
+            -webkit-animation: pulsate-bck5 3s ease-in-out infinite both;
+            animation: pulsate-bck5 3s ease-in-out infinite both;
+        }
+
+        .swiper-slide-active .pulsate-fwd5 {
+            -webkit-animation: pulsate-fwd5 5s ease-in-out infinite both;
+            animation: pulsate-fwd5 5s ease-in-out infinite both;
+        }
+
+        /* 第六页 */
+        .swiper-slide-active .lunbo6 {
+            position: relative;
+            background: url(img/background.png) no-repeat center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            animation: swing-in-top-bck 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+            position: relative;
+            z-index: 9999;
+        }
+
+        .lunbo6 .huadong {
+            width: 100%;
+            height: 20px;
+            background: url(img/huangdong_logo.png) no-repeat center;
+            position: absolute;
+            bottom: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima37 {
+            width: 40%;
+            height: 30%;
+            position: absolute;
+            bottom: -6%;
+            right: -1%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima37 h1 img {
+            width: 40%;
+            height: 30%;
+        }
+
+        .ima38 {
+            width: 40%;
+            height: 30%;
+            position: absolute;
+            bottom: 30%;
+            right: -25%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima38 h1 img {
+            width: 40%;
+            height: 30%;
+        }
+
+        .ima39 {
+            width: 30%;
+            height: 30%;
+            position: absolute;
+            bottom: 45%;
+            right: -5%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima39 h1 img {
+            width: 30%;
+            height: 30%;
+        }
+
+        .ima40 {
+            width: 50%;
+            height: 30%;
+            position: absolute;
+            top: -5%;
+            left: 39%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima40 h1 img {
+            width: 50%;
+            height: 30%;
+            animation: blink 2s infinite;
+
+        }
+
+        .ima41 {
+            width: 90%;
+            height: 30%;
+            position: absolute;
+            top: -2%;
+            left: 10%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima41 h1 img {
+            width: 90%;
+            height: 30%;
+        }
+
+        .ima42 {
+            width: 70%;
+            height: 30%;
+            position: absolute;
+            bottom: 5%;
+            left: 30%;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .ima42 h1 img {
+            width: 70%;
+            height: 30%;
+        }
+
+        /* 第六页动画 */
+        .swiper-slide-active .roll-in-right6 {
+            -webkit-animation: roll-in-right6 1.5s ease-out both;
+            animation: roll-in-right6 1.5s ease-out both;
+        }
+
+        .swiper-slide-active .roll-in-right6s {
+            -webkit-animation: roll-in-right6s 2s ease-out both;
+            animation: roll-in-right6s 2s ease-out both;
+        }
+
+        .swiper-slide-active .roll-in-right6sb {
+            -webkit-animation: roll-in-right6sb 2s ease-out both;
+            animation: roll-in-right6sb 2s ease-out both;
+        }
+
+        .swiper-slide-active .bounce-in-top6 {
+            -webkit-animation: bounce-in-top6 2s both;
+            animation: bounce-in-top6 2s both;
+        }
+
+        .swiper-slide-active .pulsate-fwd6 {
+            -webkit-animation: pulsate-fwd 5s ease-in-out infinite both;
+            animation: pulsate-fwd 5s ease-in-out infinite both;
+        }
+
+        .swiper-slide-active .roll-in-left6 {
+            -webkit-animation: roll-in-left6 1s ease-out both 0.5s;
+            animation: roll-in-left6 1s ease-out both 0.5s;
+        }
+
+        .swiper-slide-active .bounce-in-bottom6 {
+            -webkit-animation: bounce-in-bottom6 1s both 1s;
+            animation: bounce-in-bottom6 1s both 1s;
+        }
+
+        .swiper-slide-active .pulsate-bck6 {
+            -webkit-animation: pulsate-bck6 3s ease-in-out infinite both;
+            animation: pulsate-bck6 3s ease-in-out infinite both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper" id="swiper-slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="lunbo1">
+                    <h1 class="huadong shake-vertical">滑动</h1>
+                    <div class="shake-verticals">
+                        <h1 class="logo bounce-in-top1">绿色出行,低碳环保</h1>
+                    </div>
+                    <div class="shake-bottom">
+                        <h1 class="right_text bounce-in-right">低碳生活,从未做起</h1>
+                    </div>
+                    <div class='b2'>
+                        <h1 class="bike">骑单车小女孩</h1>
+                    </div>
+                    <div class='l3 bounce-in-left2'>
+                        <div class='l2'>
+                            <h1 class="light">光</h1>
+                        </div>
+
+                    </div>
+                    <div class="flower_set bounce-in-right1">
+                        <h1 class="flower">花</h1>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="lunbo2">
+                    <h1 class="huadong shake-vertical">滑动</h1>
+                    <div class="yezi_hz bounce-in-topb">
+                        <h1 class=" yezi leaf-icon">叶子</h1>
+                    </div>
+                    <div class="paper">
+                        <div class="ima1 roll-in-top">
+                            <h1 class="logo_text vibrate-1a">什么是低碳生活</h1>
+                        </div>
+                        <!-- 电器 -->
+                        <div class="box1">
+                            <div class="ima2 roll-in-left">
+                                <h1 class="left_img flicker-5">第一行图标</h1>
+                            </div>
+                            <div class="ima3 bounce-in-topa">
+                                <h1 class="logo pulsate-bck">中间图片logo</h1>
+                            </div>
+                            <div class="ima4 bounce-in-right">
+                                <h1 class="right_text shake-bl">合理使用电器</h1>
+                            </div>
+                        </div>
+                        <!-- 低碳出行 -->
+                        <div class="box2">
+                            <div class="ima5 roll-in-left">
+                                <h1 class="ditan_text vibrate-1">低碳出行</h1>
+                            </div>
+                            <div class="ima6 bounce-in-right">
+                                <h1 class="ditan_img pulsate-bck">中间图片logo</h1>
+                            </div>
+                            <div class="ima7 bounce-in-bottom">
+                                <h1 class="right_img">第二行图标</h1>
+                            </div>
+                        </div>
+                        <!-- 低碳饮食 -->
+                        <div class="box3">
+                            <div class="ima8 roll-in-left">
+                                <h1 class="left_img1 flicker-5">第一行图标</h1>
+                            </div>
+                            <div class="ima9 bounce-in-left1">
+                                <h1 class="logos pulsate-bck">中间图片logo</h1>
+                            </div>
+                            <div class="ima10 bounce-in-right">
+                                <h1 class="right_text1 shake-bl">低碳饮食</h1>
+                            </div>
+                        </div>
+                        <!-- 太阳能 -->
+                        <div class="box4">
+                            <div class="ima11 roll-in-left">
+                                <h1 class="sun_text vibrate-1">太阳能</h1>
+                            </div>
+                            <div class="ima12 bounce-in-bottom">
+                                <h1 class="sun_img pulsate-bck">中间图片logo</h1>
+                            </div>
+                            <div class="ima13 roll-in-blurred-right">
+                                <h1 class="right_imgs bounce-in-bottom1">第二行图标</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="lunbo3">
+                    <h1 class="huadong shake-vertical">滑动</h1>
+                    <div class="whbj">
+                        <div class="ima14 bounce-in-top3">
+                            <h1 class="life_logo text"><img src="img/text_logos.png" alt=""></h1>
+                        </div>
+                        <div class="ima15">
+                            <h1 class="y"><img src="img/one_text.png" alt=""></h1>
+                        </div>
+                        <div class="ima16 swirl-in-fwd">
+                            <h1 class="life"><img src="img/shenghuo.png" alt=""></h1>
+                        </div>
+                        <div class="ima17 roll-in-left3">
+                            <h1 class="attitude shake-lr"><img src="img/taidu.png" alt=""></h1>
+                        </div>
+                        <div class="ima18 puff-in-center">
+                            <h1 class="main pulsate-fwd"><img src="img/P3center_text.png" alt=""></h1>
+                        </div>
+                        <div class="ima19 bounce-in-bottom3">
+                            <h1 class="earth pulsate-bck3"><img src="img/bottom_logos.png" alt=""></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="lunbo4">
+                    <div class="one">
+                        <h1 class="huadong shake-vertical">滑动</h1>
+                        <div class="ima20">
+                            <h1 class="bounce-in-top4"><img src="img/dianji.png" alt=""></h1>
+                        </div>
+                        <div class="ima24">
+                            <h1><img src="img/click_bj.png" alt=""></h1>
+                        </div>
+                        <div class="ima21">
+                            <h1 class="slide-in-blurred-left stopimg"><img src="img/p4logo_text.png" alt=""></h1>
+                        </div>
+                        <div class="swiper mySwiper2 puff-in-center">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/1.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/2.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/3.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/4.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/5.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/6.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="ima25">
+                            <h1 class="bounce-in-bottom4"><img src="img/p4text.png" alt=""></h1>
+                        </div>
+                    </div>
+                    <div class="two" style="display: none;">
+                        <h1 class="huadong shake-vertical">滑动</h1>
+                        <div class="ima22">
+                            <h1 class="bounce-in-top4"><img src="img/dianji.png" alt=""></h1>
+                        </div>
+                        <div class="ima24" style="display: none;">
+                            <h1><img src="img/click_bj.png" alt=""></h1>
+                        </div>
+                        <div class="ima23">
+                            <h1 class="slide-in-blurred-left stopimg"><img src="img/p4two_logo.png" alt=""></h1>
+                        </div>
+                        <div class="swiper mySwiper2 puff-in-center">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/01.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/02.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/03.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/04.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/05.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/06.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="ima26">
+                            <h1 class="bounce-in-bottom4"><img src="img/p4two_text.png" alt=""></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="lunbo5">
+                    <h1 class="huadong shake-vertical">滑动</h1>
+                    <div class="ima27 swirl-in-bck">
+                        <h1 class="pulsate-fwd5"><img src="img/title_text.png" alt=""></h1>
+                    </div>
+                    <div class="ima28 slide-in-tr">
+                        <span><img src="img/huanbao_logo.png" alt="" class="logo5"></span>
+                    </div>
+                    <div class="main_text">
+                        <ul class="first_ul">
+                            <span class="num_style bounce-in-left5">1</span>
+                            <li class="bounce-in-left5">不乱扔垃圾</li>
+                            <span class="num_style bounce-in-left5">2</span>
+                            <li class="bounce-in-left5">做好垃圾分类</li>
+                            <span class="num_style bounce-in-left5">3</span>
+                            <li class="bounce-in-left5">节约水电随手关灯</li>
+                            <span class="num_style bounce-in-left5">4</span>
+                            <li class="bounce-in-left5">不浪费食物</li>
+                            <span class="num_style bounce-in-left5">5</span>
+                            <li class="bounce-in-left5">环保袋代替购物袋</li>
+                            <span class="num_style bounce-in-left5">6</span>
+                            <li class="bounce-in-left5">绿色出行少排碳气</li>
+                        </ul>
+                        <span class="laji roll-in-blurred-left5"><img src="img/Firsticon.png" alt=""></span>
+                        <span class="fenlei roll-in-blurred-left5"><img src="img/Secondicon.png" alt=""></span>
+                        <span class="wanter roll-in-blurred-left5"><img src="img/Thirdicon.png" alt=""></span>
+                        <span class="langfei roll-in-blurred-left5"><img src="img/Fourthicon.png" alt=""></span>
+                        <span class="huanbaodai roll-in-blurred-left5"><img src="img/Fifthicon.png" alt=""></span>
+                        <span class="green_text roll-in-blurred-left5"><img src="img/Sixthicon.png" alt=""></span>
+                    </div>
+                    <div class="ima35 bounce-in-bottom5">
+                        <img src="img/Iconbelow.png" alt="" class="pulsate-bck5">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="lunbo6">
+                    <h1 class="huadong shake-vertical">滑动</h1>
+                    <div class="ima36">
+                        <img src="img/Manifolddecoration.png" alt="" class="pulsate-fwd6">
+                    </div>
+                    <div class="ima37 roll-in-right6sb">
+                        <h1 class="">
+                            <img src="img/Crossicon.png" alt="">
+                        </h1>
+                    </div>
+                    <div class="ima38 roll-in-right6s">
+                        <h1 class="">
+                            <img src="img/Crossicon.png" alt="">
+                        </h1>
+                    </div>
+                    <div class="ima39 roll-in-right6">
+                        <h1 class="">
+                            <img src="img/Crossicon.png" alt="">
+                        </h1>
+                    </div>
+                    <div class="ima40 bounce-in-top6">
+                        <h1 class=""><img src="img/Environmentalicons.png" alt=""></h1>
+                    </div>
+                    <div class="ima41 roll-in-left6">
+                        <h1 class="pulsate-bck6"><img src="img/title.png" alt=""></h1>
+                    </div>
+                    <div class="ima42 bounce-in-bottom6">
+                        <h1 class="pulsate-bck6"><img src="img/Textbelow.png" alt=""></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            effect: "cards",
+            grabCursor: true,
+        });
+        var box = document.getElementById("swiper-slide");
+        if (window.innerWidth > 327) {
+            box.style.width = window.innerWidth = 327 + 'px';
+        }
+        if (window.innerHeight > 626) {
+            box.style.height = window.innerHeight = 626 + 'px';
+        }
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // 移动端
+            var element = document.getElementById("swiper-slide");
+            // element.style.margin = "0px";
+        } else {
+            // 电脑端
+            var element = document.getElementById("swiper-slide");
+            element.style.marginTop = "30px";
+        }
+        window.onload = function () {
+            var container = document.getElementById('swiper-slide'); // 获取容器元素
+            var screenWidth = window.innerWidth; // 获取屏幕宽度
+            var containerWidth = container.offsetWidth; // 获取容器宽度
+            container.style.left = (screenWidth - containerWidth) / 2 + 'px'; // 设置容器水平居中
+        }
+        const ima20 = document.querySelector('.ima20');
+        const ima22 = document.querySelector('.ima22');
+        const ima24 = document.querySelector('.ima24');
+        const one = document.querySelector('.one');
+        const two = document.querySelector('.two');
+        const lunbo4 = document.querySelector('.lunbo4');
+
+        ima20.addEventListener('click', () => {
+            one.style.display = 'none';
+            two.style.display = 'block';
+            ima22.style.display = 'none';
+        });
+
+        one.addEventListener('animationend', () => {
+            one.classList.remove('rotate-animation');
+        });
+
+        two.addEventListener('animationend', () => {
+            two.classList.remove('rotate-animation');
+        });
+
+        const imgElement = document.getElementsByClassName('.stopimg')
+        imgElement.addEventListener('click', function (event) {
+            event.preventDefault();
+        });
+
+
+
+    </script>
+</body>
+
+</html>
